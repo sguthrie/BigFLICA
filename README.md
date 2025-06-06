@@ -5,8 +5,23 @@ Gong, Weikang, Christian F. Beckmann, and Stephen M. Smith. "Phenotype Discovery
 https://www.sciencedirect.com/science/article/pii/S1361841521000967
 
 ## Requirements:
-Python 3.6+ (better with anaconda3), spams (pip install spams==2.6.1), numpy (pip install numpy==1.20.3), scipy, 
-copy, and joblib (https://joblib.readthedocs.io/en/latest/ for parallel processing of dictionary learning).
+Python 3.7+ (better with anaconda3), spams, numpy, scipy, 
+and joblib (https://joblib.readthedocs.io/en/latest/ for parallel processing of dictionary learning).
+
+### Latest method of installation:
+```sh
+module load Miniforge3
+conda create -p /well/woolrich/users/jjz865/bigflica-scripts/bigflica
+conda install -p /well/woolrich/users/jjz865/bigflica-scripts/bigflica python=3.7
+conda init
+conda activate /well/woolrich/users/jjz865/bigflica-scripts/bigflica
+pip install numpy
+pip install scipy
+pip install joblib
+conda install -p /well/woolrich/users/jjz865/bigflica-scripts/bigflica scipy
+conda activate /well/woolrich/users/jjz865/bigflica-scripts/bigflica
+pip install spams
+```
 
 ## OS System tested:
 CentOS Linux 7/ macOS BigSur
