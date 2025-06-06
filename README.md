@@ -5,7 +5,7 @@ Gong, Weikang, Christian F. Beckmann, and Stephen M. Smith. "Phenotype Discovery
 https://www.sciencedirect.com/science/article/pii/S1361841521000967
 
 ## Requirements:
-Python 3.7+ (better with anaconda3), spams, numpy, scipy, 
+Python 3.7+ (better with anaconda3), spams, numpy, scipy, matplotlib,
 and joblib (https://joblib.readthedocs.io/en/latest/ for parallel processing of dictionary learning).
 
 ### Latest method of installation:
@@ -21,6 +21,7 @@ pip install joblib
 conda install -p /well/woolrich/users/jjz865/bigflica-scripts/bigflica scipy
 conda activate /well/woolrich/users/jjz865/bigflica-scripts/bigflica
 pip install spams
+pip install matplotlib
 ```
 
 ## OS System tested:
