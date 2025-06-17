@@ -91,7 +91,9 @@ def BigFLICA(data_loc, nlat, output_dir, migp_dim, dicl_dim, ncore = 1):
         #load migp data, a subject-by-feature matrix
         ff = output_dir+'/DicL' + str(dicl_dim) + '/DLdata_mod'+('%02d' % (i+1))+'.npy'
         if os.path.exists(ff) == 0:
-            dd=utils.nets_zscore(np.load(output_dir+'/MIGP' + str(migp_dim) + '/PCAdata_mod'+('%02d' % (i+1))+'.npy')) 
+            # This line is the only difference between mine and Rezvan's code
+            #dd=utils.nets_zscore(np.load(output_dir+'/MIGP' + str(migp_dim) + '/PCAdata_mod'+('%02d' % (i+1))+'.npy'))
+            dd = np.load(output_dir + '/MIGP' + str(migp_dim) + '/PCAdata_mod' + ('%02d' % (i + 1)) + '.npy')
             D = spams.trainDL(np.asfortranarray(dd.T,dtype ='float64'),**param) #this is dicl_dim-by-migp_dim    
             np.save(ff,D)
         else:
